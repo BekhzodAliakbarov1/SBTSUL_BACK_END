@@ -22,6 +22,7 @@ class News(models.Model):
     paragraphEng = models.TextField(max_length=1000, blank=True, null=True)
     date = models.DateField(auto_now=True, blank=True, null=True)
     pictureURL = models.CharField(max_length=2000, blank=True, null=True)
+    image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return self.titleUzb
@@ -75,6 +76,7 @@ class Images(models.Model):
     titleEng = models.CharField(max_length=200, blank=True, null=True)
     pictureURL = models.CharField(max_length=2000, blank=True, null=True)
     date = models.DateField(auto_now=True, blank=True, null=True)
+    image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return self.titleUzb
